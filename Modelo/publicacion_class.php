@@ -3,6 +3,7 @@ include ('conexion_pd.php');
 require('registro.php');
 require('guardarDocumento.php');
 require('descripcion.php');
+require('periodo.php');
 
 class Publicacion 
 {
@@ -25,6 +26,10 @@ class Publicacion
 		private $visualizable;
 		private $descargable;
 
+		//private $fp;
+		//private $hp;
+        private $fechapu;
+		private $horapu;
 		/*
 		*@
 		*/
@@ -33,14 +38,18 @@ class Publicacion
 		private $descripcionOB;
 		
 		public function __construct($nombreUsuario,$tipo,$estado,$nombreRegistro,$fechaRegistro,
-									$horaRegistro,$tamanio,$rutaDocumento,$visualizable,$descargable,$descripcion)  
+									$horaRegistro,$tamanio,$rutaDocumento,$visualizable,$descargable,$descripcion,$fechapu,$horapu)  
 		{
 			$this->registro= new Registro($nombreUsuario,$tipo,$estado,$nombreRegistro,$fechaRegistro,$horaRegistro);
 			$this->idRegistro = $this->registro->getIdRegistro();
 			$this->documento = new GuardarDocumento($this->idRegistro,$tamanio,$rutaDocumento,$visualizable,$descargable);
 			$this->descripcionOB = new Descripcion($this->idRegistro,$descripcion);
+			
+            //$this->$periodo = new Periodo($this->idRegistro,$fechapu,$horapu);
 
 
+             $consulta = mysql_query("INSERT INTO periodo (ID_R,fecha_p,hora_p)
+		VALUES('$idRegistro','$fechapu','$horapu')");  
 			
 			
 		}

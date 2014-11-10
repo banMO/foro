@@ -1,0 +1,14 @@
+http://localhost/ProyectoSprint3/Repositorio/asesor/Penguins.jpg
+http://localhost/ProyectoSprint3/Repositorio/asesor/Tulips.jpgFreevalue.srl
+SELECT ge.`NOMBRE_CORTO_GE`
+ FROM `inscripcion` AS i,`asesor` AS a,`grupo_empresa` AS `ge`,`gestion` AS g,`proyecto` AS p WHERE i.`NOMBRE_UA` = a.`NOMBRE_U` AND i.`NOMBRE_UGE` = ge.`NOMBRE_U` AND i.`ID_G` = g.`ID_G` AND i.`CODIGO_P` = p.`CODIGO_P` AND a.`NOMBRE_U` LIKE '$idAsesor'
+
+
+
+
+
+
+
+
+SELECT ge.`NOMBRE_CORTO_GE`
+ FROM `grupo_empresa` AS `ge` WHERE ge.`NOMBRE_LARGO_GE` = Freevalue.srl

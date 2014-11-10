@@ -128,9 +128,9 @@
                                     <a href="#">Publicaci&oacute;n Documentos <span class="fa arrow"></span></a>
                                     <ul class="nav nav-third-level">
                                         
-                                        
+                                        z
                                         <li>
-                                            <a href="../Vista/publicar_asesor.php">Nueva Publicaci&oacute;n </a>
+                                            <a href="../Vista/publicar_asesor.php" >Nueva Publicaci&oacute;n </a>
                                         </li>
                                         <li>
                                             <a href="../Controlador/publicaciones.php">Publicaciones </a>
